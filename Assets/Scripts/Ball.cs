@@ -5,12 +5,14 @@ public class Ball : MonoBehaviour
    public float speed = 5;
    private Vector2 direction = Vector2.one;
 
+   public Transform paddleLeft;
+   public Transform paddleRight;
+
    private void Update()
     {
         Move();
-
         BounceTopAndBottom();
-
+        BounceWithPaddles();
     }
 
     private void BounceTopAndBottom()
@@ -34,5 +36,35 @@ public class Ball : MonoBehaviour
     {
         Vector3 movement = direction * speed * Time.deltaTime;
         transform.Translate(movement);
+    }
+
+    private void BounceWithPaddles()
+    {
+        float paddleWidth = 0.5f;
+        float paddleHeight = 2f;
+
+        float ballSize = 0.5f;
+
+        if (direction.x > 0) // Moving to the Right
+        {
+            if ((transform.position.x + ballSize / 2f) > (paddleRight.position.x - paddleWidth / 2f) &&
+                (transform.position.x - ballSize / 2f) < (paddleRight.position.x + paddleWidth / 2f) &&
+                transform.position.y > (paddleRight.position.y - paddleHeight / 2f) &&
+                transform.position.y < (paddleRight.position.y + paddleHeight / 2f))
+            {
+                direction.x = -1;
+            }
+
+        }
+        else if (direction.x < 0) // Moving to the Left
+        {
+            if ((transform.position.x - ballSize / 2f) > (paddleLeft.position.x - paddleWidth / 2f) &&
+                (transform.position.x - ballSize / 2f) < (paddleLeft.position.x + paddleWidth / 2f) &&
+                transform.position.y > (paddleLeft.position.y - paddleHeight / 2f) &&
+                transform.position.y < (paddleLeft.position.y + paddleHeight / 2f))
+            {
+                direction.x = 1;
+            }
+        }
     }
 }
