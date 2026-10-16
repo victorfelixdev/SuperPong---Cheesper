@@ -358,7 +358,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1785777887}
   - component: {fileID: 1785777886}
-  - component: {fileID: 1785777888}
+  - component: {fileID: 1785777890}
   - component: {fileID: 1785777889}
   m_Layer: 0
   m_Name: Left Paddle
@@ -442,20 +442,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1785777888
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1785777885}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53ffd75c4767f6d4da290deef1f1da22, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Paddle
-  _moveInput: {x: 0, y: 0}
-  _paddleSpeed: 5
 --- !u!143 &1785777889
 CharacterController:
   m_ObjectHideFlags: 0
@@ -481,6 +467,21 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1785777890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1785777885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53ffd75c4767f6d4da290deef1f1da22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PaddleLeft
+  _paddleSpeed: 10
+  _paddleKeyUp: 119
+  _paddleKeyDown: 115
 --- !u!1 &1819197584
 GameObject:
   m_ObjectHideFlags: 0
@@ -491,7 +492,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1819197586}
   - component: {fileID: 1819197585}
-  - component: {fileID: 1819197587}
+  - component: {fileID: 1819197589}
   - component: {fileID: 1819197588}
   m_Layer: 0
   m_Name: Right Paddle
@@ -575,20 +576,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1819197587
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1819197584}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1227b3ff0d1aca24a8c004d492199e7b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PaddleRight
-  _moveInput: {x: 0, y: 0}
-  _paddleSpeed: 5
 --- !u!143 &1819197588
 CharacterController:
   m_ObjectHideFlags: 0
@@ -614,6 +601,21 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1819197589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1819197584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53ffd75c4767f6d4da290deef1f1da22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PaddleLeft
+  _paddleSpeed: 10
+  _paddleKeyUp: 273
+  _paddleKeyDown: 274
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
