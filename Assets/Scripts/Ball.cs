@@ -3,6 +3,7 @@ using UnityEngine;
 public class Ball : MonoBehaviour
 {
    public float speed = 5;
+   public float speedLimit = 20;
    private Vector2 direction = Vector2.one;
 
    public Transform paddleLeft;
@@ -13,6 +14,14 @@ public class Ball : MonoBehaviour
         Move();
         BounceTopAndBottom();
         BounceWithPaddles();
+    }
+
+    public void IncreaseSpeed(float speedAmount)
+    {
+        if (speed < speedLimit)
+        {
+            speed += speedAmount;
+        }
     }
 
     private void BounceTopAndBottom()
@@ -66,5 +75,11 @@ public class Ball : MonoBehaviour
                 direction.x = 1;
             }
         }
+    }
+
+    public void ResetPosition()
+    {
+        transform.position = Vector3.zero;
+        direction.x = -direction.x;
     }
 }
