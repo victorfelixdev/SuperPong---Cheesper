@@ -52,7 +52,7 @@ O Super Pong é um projeto desenvolvido para aprendizado e experimentação. Sua
 
 ## 🏠 Desenvolvido por
 
-**The Felix House** — estúdio independente de desenvolvimento de jogos e software.
+Victor Felix via **The Felix House** — estúdio independente de desenvolvimento de jogos e software.
 
 ---
 
