@@ -4,7 +4,6 @@ public class Ball : MonoBehaviour
 {
    public float speed = 5;
    public float speedLimit = 20;
-   public float autoIncrementSpeed = 0.01f;
    private Vector2 direction = Vector2.one;
 
    public Transform paddleLeft;
@@ -21,7 +20,6 @@ public class Ball : MonoBehaviour
         Move();
         BounceTopAndBottom();
         BounceWithPaddles();
-        speed += autoIncrementSpeed;
     }
 
     public void IncreaseSpeed(float speedAmount)

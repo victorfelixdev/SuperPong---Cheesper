@@ -200,7 +200,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.28310937, g: 0.46226418, b: 0.10684408, a: 0}
+  m_BackGroundColor: {r: 0.34173167, g: 0.10588234, b: 0.4627451, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -427,7 +427,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.821348, g: 0.9245283, b: 0.7195621, a: 1}
+  m_Color: {r: 0.81960785, g: 0.7176471, b: 0.9254902, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -468,6 +468,7 @@ MonoBehaviour:
   speedLimit: 15
   paddleLeft: {fileID: 1785777887}
   paddleRight: {fileID: 1819197586}
+  isMoving: 0
 --- !u!1 &1785777885
 GameObject:
   m_ObjectHideFlags: 0
@@ -537,7 +538,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.821348, g: 0.9245283, b: 0.7195621, a: 1}
+  m_Color: {r: 0.818147, g: 0.7176471, b: 0.9254902, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -671,7 +672,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.821348, g: 0.9245283, b: 0.7195621, a: 1}
+  m_Color: {r: 0.81960785, g: 0.7176471, b: 0.9254902, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -837,7 +838,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Text
   m_Material: {fileID: 0}
-  m_Color: {r: 0.81960785, g: 0.9254902, b: 0.7176471, a: 1}
+  m_Color: {r: 0.81960785, g: 0.7176471, b: 0.9254902, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
