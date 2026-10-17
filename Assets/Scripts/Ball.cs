@@ -4,16 +4,24 @@ public class Ball : MonoBehaviour
 {
    public float speed = 5;
    public float speedLimit = 20;
+   public float autoIncrementSpeed = 0.01f;
    private Vector2 direction = Vector2.one;
 
    public Transform paddleLeft;
    public Transform paddleRight;
 
+    public bool isMoving = false;
    private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Space) && !isMoving)
+        {
+            isMoving = true;
+        }
+
         Move();
         BounceTopAndBottom();
         BounceWithPaddles();
+        speed += autoIncrementSpeed;
     }
 
     public void IncreaseSpeed(float speedAmount)
@@ -43,8 +51,11 @@ public class Ball : MonoBehaviour
 
     private void Move()
     {
-        Vector3 movement = direction * speed * Time.deltaTime;
-        transform.Translate(movement);
+        if (isMoving)
+        {
+            Vector3 movement = direction * speed * Time.deltaTime;
+            transform.Translate(movement);
+        }
     }
 
     private void BounceWithPaddles()
@@ -81,5 +92,12 @@ public class Ball : MonoBehaviour
     {
         transform.position = Vector3.zero;
         direction.x = -direction.x;
+        isMoving = false;
+        Invoke("StartMoving", 2);
+    }
+
+    private void StartMoving()
+    {
+        isMoving = true;
     }
 }

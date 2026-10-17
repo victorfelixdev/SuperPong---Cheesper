@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Paddle : MonoBehaviour
 {
-    public float _paddleSpeed = 10f;
+    public float _paddleSpeed = 20f;
 
     public KeyCode _paddleKeyUp = KeyCode.W;
     public KeyCode _paddleKeyDown = KeyCode.S;

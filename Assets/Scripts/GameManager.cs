@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class GameManager : MonoBehaviour
 
     public int pointsToIncreaseSpeed = 3;
     public float speedIncreaseAmount = 0.5f;
+
+    public int winningScore = 15;
 
     public Ball ball;
 
@@ -28,6 +31,8 @@ public class GameManager : MonoBehaviour
             AddScore("Left");
             ball.ResetPosition();
         }
+
+        RestartScene();
     }
 
     public void AddScore(string player)
@@ -47,6 +52,17 @@ public class GameManager : MonoBehaviour
         }
 
         UpdateScoreText();
+    }
+
+    private void RestartScene()
+    {
+        if (scoreLeft >= winningScore)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        } else if (scoreRight >= winningScore)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
 
     private void UpdateScoreText()

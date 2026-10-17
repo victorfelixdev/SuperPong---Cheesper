@@ -599,7 +599,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53ffd75c4767f6d4da290deef1f1da22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PaddleLeft
-  _paddleSpeed: 10
+  _paddleSpeed: 20
   _paddleKeyUp: 119
   _paddleKeyDown: 115
 --- !u!1 &1819197584
@@ -733,7 +733,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53ffd75c4767f6d4da290deef1f1da22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PaddleLeft
-  _paddleSpeed: 10
+  _paddleSpeed: 20
   _paddleKeyUp: 273
   _paddleKeyDown: 274
 --- !u!1 &1969541406
@@ -784,6 +784,7 @@ MonoBehaviour:
   scoreRight: 0
   pointsToIncreaseSpeed: 3
   speedIncreaseAmount: 0.5
+  winningScore: 15
   ball: {fileID: 1486795821}
   scoreText: {fileID: 2106102106}
 --- !u!1 &2106102104
